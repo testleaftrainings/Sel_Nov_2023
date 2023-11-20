@@ -1,0 +1,110 @@
+Sunday's Agenda:
+-----------------
+8.45am  to 9.00am  -Recap
+9.00am  to 10.00am -Control Statements
+10.00am to 10.15am -Classroom
+10.15am to 10.25am -Break
+10.25am to 11.25am -Methods and Objects
+11.25am to 11.40pm -Classroom
+11.40pm to 11.50am -Live Quiz
+11.50am to 12.40pm -Arrays
+12.40pm  to 1.00pm -Classroom
+-----------------------------------------------------------------------
+
+Control Statements:
+-----------------
+ ->control the flow of execution
+ Selection  ->descision 
+ Iteration  -->looping
+ Jump       -->stop or continue the execution
+
+Selection
+--------
+ if
+ if -else statement
+ if-else if -else ladder
+
+operators
+---------
+ Arithmetic expression
+ +
+ -
+ /
+ *
+ % -->modulus operator -->give the remainder of the division
+ = -->assignment opertor 
+Logical operator
+&& ->and
+|| -->or
+
+Comparision 
+----------
+== -->equality of both the values
+!= -->not equal to 
+>= -->greaterthan equal to
+<= -->less than equal to 
+----------------------------
+++ -->increment -->to increae the value by 1
+--  -->decremet -->to reduce the value by 1
+i have 1 clarification where we will use y%=0, where we will use Y%==0
+
+y%=0 ->invalid expression
+ Y%==0 -->valid 
+
+switch case
+
+loop Condition -->Iteration 
+-------------
+for -->looping Condition
+    -->to write single logic and run for n times
+
+
+---------
+Class -->design /template to define the information and action
+
+information -->datatype -storing under a variable
+action -->funtionality
+Method -->to define the action
+       -->set of statments to be written -->reusability
+syntax:(Method signature)
+
+access modifier returntype methodName(intput arguments)
+public  -->can be accessed anywhere outside the class, package
+private -->access within the class
+protected
+default
+
+
+
+return type -->primitive /non primitive datatype
+ void --.nothing is returned to the method
+
+ // to use any methods designed outside the mainmethod -->class level
+ // create reference for the method to use it..
+
+ // To create reference -->create instance for a class/create object for the
+ // class
+ // syntax:
+ // className objectName=new className();
+
+
+ Array: non primitive datatype
+ -----
+ store the collection of similar datatype value
+ fixed length -cannot alter the size of the array
+ store a numbers
+ Score -->78,45,99,79
+ fixed length
+
+ length -->count of elements
+ index-->position of the element stored in the memory -->starts with 0
+
+ ArrayIndexOutOfBoundsException -->trying to retreive the element from array that index is not available
+
+
+
+
+
+
+
+
