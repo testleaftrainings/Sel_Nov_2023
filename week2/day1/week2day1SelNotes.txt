@@ -1,0 +1,74 @@
+Saturday's Agenda
+==============
+8.45 to 9.00 am     Recap/LiveQuiz
+9.00  to 10.00am    Selenium Introduction
+10.00 to 10.15am  	Classroom
+10.15 to 10.30am   	Break
+10.30 to 11.30am   	HTMl Tags and Selenium Locators(Id, name, class) 
+11.30 to 11.50am   	Classroom
+11.50 to 12.05pm   	Selenium Locators(link text,partial link text) 
+12.05 to 12.10pm	Break
+12.10 to 12.50pm    Dropdown
+12.50 to 1.05pm     Classroom
+1.05  to 1.15pm     Recap
+
+How selenium communicates  with browser
+
+Selenium Script
+Language bindings ----> BrowserDriver ---->Browser
+					API -->http request
+					    ChromeDriver---> ChromeBrowser
+						            <---
+							http response
+							
+							browserderiver--> exe file  binary file--> api -application programming interface
+
+Pre-Requsite
+Java
+Eclipse
+Selenium library
+<dependency>
+  <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.13.0</version>
+	</dependency> 
+	
+	Maven --Build tool -- manages the dependencies
+	
+	Step.1 instantiate the chromedriver class
+	step.2 use get() to load the url
+	step.3 to maximize the browser
+	
+	TO talk with webelement
+	  -> design -->right click on the element-->inspect /ctrl shift i/ f12
+	  -> Html document / DOM page
+	  
+	  HTML Tags--> helps to identify the type of the element - button,link,link
+	  Locators in Selenium
+	  Basic Locators 
+	   id
+	   name
+	   className
+	   linktext
+	   partiallinkText
+	   tagName
+	   xpath
+	   ================================
+	  
+	   Testcase=Login testcase
+	   Step1 Launch the chromeBrowser
+	   step2  Load the url
+	   step3  enter the username
+	   step4  enter the password
+	   step5  click on the login button
+	   step6  verify the landed page	   
+	   
+	   Order of locator selection
+	   ============================
+	   Locators  -> to prefer
+	   id  - unique /no numbers 
+	   name - unique/no duplicates
+	   className- unique/no duplicates/no whitespaces
+	   linktext - unique/no numbers
+	   
+	   
