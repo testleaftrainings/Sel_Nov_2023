@@ -1,0 +1,158 @@
+﻿Sunday's Agenda
+==============
+8.45am  to 9.00am    Recap/Live quiz
+9.00am  to 9.45am    Handling dropdown
+9.45am 	to 10.00am   Classroom
+10.00am	to 10.10am   Break
+10.10am to 11.30am   Basic Xpath
+11.30am to 11.50am   Classroom
+11.50am to 12.45pm   Advanced Xpath
+12.45am to 1.05pm    Classroom
+1.05am  to 1.15pm    ImplicitWait
+
+step:1 launch browser
+step:2 load url
+step:3 enter username and password
+step:4 click onlogin
+step:5 click on CRMSFA
+step:6 click on leads
+step:7 click on createlead
+step:8 enter the manadatory fields
+step:9 select the option 
+
+locate the element
+use Select class
+Select obj=new Select(webelement) 
+obj. to pick the option
+3 ways
+
+using index -- index starts with zero
+using vlaue attribute 
+using visibleText -- black text
+
+For Industry->Compuer Software 
+For Ownership->S-corporation
+
+id
+name
+classname
+linktext
+partiallinktext
+
+Xpath -->address of the element
+Absolute xpath --many stops -->long path
+   -complete address
+   -starts with the root element html
+   to write absolute xpath start with
+   /html
+  to write in DOM page-->click on the dom page use Ctrl f
+  /html/body/div[2]/div[2]/div/form/p/input
+  -not recomended 
+  //*[@id="login"]/p[1]
+  //*[@id="CardInstancexvbETq8z8g7qEcbU_Xes7w"]/div[2]/div[1]/div[1]/a/div[1]/img
+  
+Relative xpath --point to point-->short path
+------------------
+starts with //tagname
+
+5 ways
+======
+1.Attribute based xpath:
+------------------------
+syntax:
+//tagname[@attribute='attributeValue']
+//label[@for='username']
+//input[@id='username']
+
+2.Text based xpath
+--------------------
+syntax: 
+//tagname[text()='blackTextValue']
+//a[text()='Leads']
+
+3. Partial Attribute based xpath:
+---------------------------------
+syntax:
+//tagname[contains(@attribute,'partial attribute value']
+//input[contains(@class,'Sub')]
+
+4.Partial Textbased  Xpath
+--------------------------
+syntax: 
+//tagname[contains(text(),'partial textValue')]
+
+//a[contains(text(),'SFA')]
+
+5.Collection based xpath
+------------------------
+syntax:
+(Any relative xpath)[index]
+(//input[@class='inputLogin'])[2]
+
+limitation use the index 5/6
+=================================================
+AdvancedXpath -->relationship -->Axes xpath(8 ways)
+
+Parent to child
+------------------
+(relative xpath)/tagname of the child(realative xpath of child)
+//p/input[@id='username']
+
+//p[@class='top']/input
+
+child to parent
+---------------
+(relative xpath of child)/parent::tagname of parent
+//input[@id='password']/parent::p
+
+GrandParent to GrandChild
+-------------------------
+syntax::
+(relative xpath of the Grandparent)//tagname of grandChild( xpath)
+(//td[@class='x-grid3-col x-grid3-cell x-grid3-td-partyId x-grid3-cell-first '])[2]//a
+
+GrandChild to GrandParent
+------------------------
+syntax>
+(relative xpath of GrandChild)/anscestor::tagname of grand parent
+//input[@id='createLeadForm_companyName']/ancestor::tr
+
+Sibling :
+elder to younger
+--------------
+(relative xpath of elder sibling)/following-sibling::tagname of youngersibling
+//a[contains(@class,'linkEffect')]/following-sibling::div
+
+younger to elder
+-----------------
+(relative xpath of yonger sibling)/preceding=sibling::tagname of elder 
+//div[contains(@class,'loginClk')]/preceding-sibling::a
+																									  ś
+								 
+Cousin
+------                                   
+elder to younger
+(relative xpath of elder)/following::tagname of younger cousin
+//span[text()='Company Name']/following::input[@id='createLeadForm_companyName']
+younger to elder
+(relative xpath of younger)/preceding::tagname of eldercousin
+
+
+
+ImplicitWait:
+-------------
+ NoSuchElement Exception-->when locator value is wrong
+ StaleElemntException -->absence of element in DOM
+ 
+  Implicit Wait -->Global wait
+                -->applicable on all findElement /findElements
+				-->driver object will wait for the element to get located for the given time
+				if the element is found in 2 s -->driver will not wait for remaining sec (13sec) 
+ 
+ Thread.sleep(2000);
+ ------------------
+	-It is a java wait not related to selenium methods
+	-it will pause the execution for the given time
+	-slows down the execution
+	-eventhough the element is identifiable , execution will not resume until the time elapses
+   
