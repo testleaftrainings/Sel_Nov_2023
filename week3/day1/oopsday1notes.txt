@@ -1,0 +1,65 @@
+Saturday's Agenda;
+-----------------
+9.00Am 	to 9.45Am   -String Basic
+9.45Am 	to 10.05Am  -Classroom
+10.05Am to 10.45Am  -String methods
+10.45Am to 11.00AM  -Break
+11.00Am to 11.50Am	-Inheritance
+11.50Am to 12.10PM	-Classroom
+12.10PM to 12.45PM  -Polymorphism
+
+String -Non -Primitive datatype
+       ->reference -->object
+	  	   
+	  equals
+	  equalsIgnoreCase
+	  charAt()
+	  tocharArray
+	  split
+	  replaceAll
+
+OOPs -->Object Oriented Programming
+
+Class -->objects
+Variable
+Methods
+
+4 pillars
+---------- 
+Inheritance -->acquiring the property of Parent
+Polymorphism-->Single funtionality -->multiple Impln
+Abstraction -->ATM.Mobile
+Encapsulation-->data security
+
+
+Reusability -->reduce the number lines /memory space/multiple Impln
+
+Inheritance -->acquiring the property of Parent
+  ->Keyword extends  -->relationship between the parent class and subclass
+  
+  Vehicle-->Car -->one level inheritance -->Single inheritance
+  Vehicle-->Car-->Audi-->multi-level Iheritance 
+  Audi-->Vehicle and Car -->Multiple Inheritance -->not possible at class level
+  
+  
+  Selenium Example:
+  ChromeDriver -->Chromium-->RemoteWebDriver
+  
+  
+  Polymorohism -->single Functionlaity -->multiple Forms
+  2ways
+  MethodOverloading -->compiletime polymorphism /Earlybinding
+     -->within in class ,with same methodname and adding differnt argument ,count of arguments
+	-->return type can be of anytype
+Selenium Example:
+  ChromeDriver class methods
+  
+  MethodOverriding -->dynamic Polymorohism/Late binding
+    -->works between classes only when have relationship 
+	
+	-->Same method name ->same arguments-->different classes
+	-->return type should be same
+	Selenium Example:
+	driver.quit()
+	equals()->java
+	
