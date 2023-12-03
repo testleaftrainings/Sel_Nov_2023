@@ -1,0 +1,76 @@
+Sunday's agenda:
+---------------
+8.45AM  to 9.00AM   -Recap
+9.00Am 	to 9.45Am   -Abstraction
+9.45Am 	to 10.20Am  -Abstract class
+10.20Am to 10.40Am  -Classroom
+10.40Am to 10.55AM  -Break
+10.55Am to 12.05AM  -List-Collection
+12.05Am to 12.20PM  -Classroom
+	5 min break
+12.25pm to 12.50pm	-Set-Collection
+12.50PM to 1.00pm   -Classroom
+
+Abstraction:
+------------
+ --Hiding the internals(unwanted datas)-->Providing us the relavant datas
+ -->reduce the complexity of project
+ 
+ -Interface
+ -Abstract class
+ 
+ Interface -100% abstraction
+           --No body /no implementation
+		   keyword-implements
+
+
+Abstract class--->0 to 100% abstraction
+
+
+Cannot create Object/instantiate the abstract/interface class
+
+		   
+		   Inheritance between similar classes
+		   class extends class
+		   interface extends interface
+		   class extends abstractclass
+		   
+		   abstract class extends abstract class
+		   
+		   RBI extends CIBIL
+		   
+		   SBI -->RBI and Cibil methods
+		   ICICI-->RBI and cibil methods
+		   
+Collection:
+----------
+	-group of elements
+	
+	Iterable-->interface (supermost interface)
+	collection subInterface of iterable
+	List -->subInterface of collection
+	
+	Abstract list -->abstract class
+	
+	LinkedList
+	ArrayList -Implementation class /Concrete class
+
+List 
+
+Array-->fixed size-->cannot  increase or decrease the size of array
+
+
+List-->interface -->to store dynamic datas
+-->can grow/ Shrink
+-->Maintains the insertion order
+-->allows Duplicate datas
+
+ArrayList-->index based-->access the element-->No much modification
+LinkedList-->Pointer-->insert /deletion-->
+
+add
+remove
+clear
+get
+contains
+size
