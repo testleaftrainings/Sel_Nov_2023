@@ -1,0 +1,90 @@
+Saturday's Agenda:
+-----------------
+9.00AM  to 10.00AM  Collection -Set
+10.00AM to 10.20AM  Classroom
+10.20AM to 10.30AM  Break
+10.30AM to 11.30AM  TargetLocator-Alert
+11.30AM to 11.40AM  Classroom
+11.40AM to 12.30AM  Frame
+12.30PM to 12.50PM  Classroom
+12.50PM to 1.00PM   Live quiz
+
+
+-------
+Collection-List
+	ArrayList
+	LinkedList
+ List<Integer> listName= new ArrayList<Integer>();
+ -->dynamic array
+ -->it maintains insertion order
+ -->allows duplicate
+  get()
+  remove()
+  clear()
+  findElements-->List<WebElement>
+  dropdown-->getOptions-->List<WebElement>
+  
+ Set -->interface
+     Implementation classes
+	   -->HashSet -Random order (Hash code)
+	   -->LinkedHashSet-- maintain insertion order
+	   -->TreeSet -- maintain ASCII order
+     -->does not allow duplicates
+ 
+  Set<String> setName=new HashSet<String>();
+  
+  get() -->not there
+   
+   ------------------------
+  TargetLocators
+    Alert
+	Frame
+	Windowhandle
+	
+	Notification -->browser 
+	
+	Alert
+	----
+	 -pop up from the application
+	 --cannot be ignored/we need to handle it
+	 --alert messages are not inspectable
+	 --JS script code
+	  
+	  Exception :
+	  UnhandledAlertException
+	  
+	  Alert -->interface
+	   implementation class -RemoteAlert
+	  
+	  
+	  Modal Alert
+	  -----------
+	  Simple Alert  -->  one single option -->accept
+	  Confirmation Alert -->decision on it -->ok/cancel
+	  Prompt Alert-->allow to give input into the alert box and ok/cancel	  
+	  
+	  
+	  Non Modal Alert/Sweet alert
+	  ---------
+	   -->cannot be ignored 
+	   -->can be inspectable
+	   -->handle as normal element
+	   
+Frame:
+-----
+  iframe -->inline frame
+    -->HTML inside another HTML  --> //<html>
+	
+	</html>
+	
+	switchTo().frame()
+	frame() -->accepts the argument -->3 ways
+	using index -->0
+	using frame attribute -->name or id -->as string value
+	using frame ele as webelement
+	WebElement frameele=driver.findelement(By.xpath("(//iframe)[1])"));
+    frame(frameele)
+	
+	Exceptions:
+	NoSuchFrameException
+	NOSuchElementException
