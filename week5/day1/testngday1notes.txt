@@ -1,0 +1,154 @@
+Sunday's Agenda:
+---------------
+9.00AM  to  9.20AM   -TestNg Introduction
+9.20AM  to  9.35AM   -Basic TestNg Script
+9.35AM  to  9.50AM 	 -Classroom
+9.50Am  to 10.15AM   -Sequential Execution & Report
+10.15AM to 10.30AM   -Classroom 
+10.30Am to 10.45AM	 -Break
+10.45AM to 11.30AM   -Parallel Execution 
+11.30AM to 11.45AM   -Classroom
+11.45PM to 12.45PM   -Annotations
+12.45PM to 1.00PM    -Classroom
+
+----------------------------------
+TestNG -Test Next generation 
+------
+  -framework to configure the execution
+  -Unit testing framework /Execution framework
+Plugin
+Dependencies 
+
+
+
+1.Extract the zip file
+2. copy the testcase folder
+3. paste it under scr/main/java
+
+
+
+
+1.Converted the selenium java to Selenium testng script
+Steps to sequentially -->one after the other 
+----------------------------------------
+1.Select the testcases which are having @Test and right click -->TestNG -->convert Testng
+
+
+
+
+<test thread-count="2" parallel="classes" name="Test1">
+    <classes>
+      <class name="testcase.DeleteLead"/>
+      <class name="testcase.CreateLead"/>
+    </classes>
+  </test> <!-- Test -->  
+  
+  
+   <test thread-count="2" parallel="classes" name="Test">
+    <classes>      
+      <class name="testcase.DuplicateLead"/>
+    </classes>
+  </test> <!-- Test -->
+
+Annotation 
+----------
+
+@Before -->preCondition
+@Test //mandatory
+@After -->postCondition
+
+
+<suite> -->@BeforeSuite and @AfterSuite
+  <test> -->@BeforeTest and @AfterTest
+    <classes> -->@BeforeClass and @AfterClass
+	  <method> -->@BeforeMethod and @AfterMethod
+	     @Test
+		
+		 Hirerachy of annotation
+		 
+		 @BeforeSuite
+		  @BeforeTest
+		   @BeforeClass
+		    @BeforeMethod
+			 @Test
+			@AfterMethod
+		   @AfterClass
+		  @AfterTest
+		 @AfterSuite
+
+
+Scenario with 1 test method 
+		 
+Before Suite
+Before Test
+Before Class
+Before Method
+Learning Annotation hirerachy
+After Method
+After Class
+After Test
+
+
+scenario with 2 test methods
+-----------------------------
+Before Suite
+Before Test
+Before Class
+
+Before Method
+Learning Annotation hirerachy
+After Method
+
+Before Method
+Learning Annotation hirerachy -2
+After Method
+
+After Class
+After Test
+After Suite
+
+Scenario with 2 classes:
+-------------------------
+
+Before Suite
+Before Test
+Learning Annotation hirerachy -3
+
+Before Class
+
+Before Method
+Learning Annotation hirerachy
+After Method
+Before Method
+Learning Annotation hirerachy -2
+After Method
+After Class
+After Test
+After Suite
+
+
+Scenario with 2 classes 
+-----------------------
+
+Before Suite  -->resources  cloud /report   -
+Before Test   -->connect db/ excel
+BeforeClass from New Test
+Learning Annotation hirerachy -3
+Before Class -from annotation
+Before Method    -->lauch the browser
+Learning Annotation hirerachy
+After Method   -->close
+Before Method
+Learning Annotation hirerachy -2
+After Method
+After Class
+After Test
+After Suite
+
+---------------------------------------------------
+
+suite -->will be executed only once for all the configuration -->test, class,method
+test -->executed for each <test> -->class ,method
+class -->executed for each <class>
+method -->executed for each @Test
+
