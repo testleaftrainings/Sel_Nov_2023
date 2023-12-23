@@ -1,0 +1,69 @@
+Saturday's Agenda:
+----------------
+9.00AM  to 9.45AM  -Static Parametrization
+9.45AM  to 10.00AM -Classroom
+10.00AM to 10.30AM -Dynamic parametrization
+10.30AM to 10.45AM -classroom
+10.45AM to 11.00AM -Break
+11.00AM to 11.30AM -Read Excel
+11.25PM to 11.40PM -Classroom
+11.40PM to 12.15PM -Excel Integration
+12.15PM to 12.35PM -Classroom
+12.35PM to 12.50PM -Common Integration
+
+
+Parametrization:
+   Static parametrization
+   dynamic paramertization
+   
+   browser name/url
+   login credentials
+   
+    Static parametrization:
+   
+   
+   @Parameters 
+   <parameter> -->xml file -->data /value to the testcase   
+   set test date through xml file 
+   
+   classlevel-->configured with credentials
+   
+   testlevel -->each test has diff username
+			-->common url
+			
+dynamic Parametrization ->set the data specific to the test case
+
+@DataProvider
+
+
+cname		fname		lname
+Tl			Vidya		R
+Wipro		Ebrahim		Moin
+TCS			Unnamalai	P
+
+
+Steps to Read the excel data
+-----------------------------
+1.Create an excel file locally in your system and add the testdata
+2.Under project -->Create a folder -->right click-->New-->folder -->data
+3.Copy the file from the local drive and paste under the data folder
+
+
+
+Steps to integrate the excel Data into the @Test
+------------------------------------------------
+Get the data from the Excel in the form String[][] for DateProvider
+
+
+Changes to be made in ReadExcel:
+-----------------------------------
+Step:1 Convert the main method(ReadExcel)into a normal method
+      remove the String[] args and rename the method into meaningful name
+
+Step:2 Create a 2D String array in ReadExcel class
+
+Step:3 Assign the excel data from each cell(row,col) to data array
+
+step:4 Call the method in the dataprovider method
+
+
