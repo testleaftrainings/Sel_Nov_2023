@@ -1,0 +1,90 @@
+Sunday's Agenda:
+--------------- 
+9.00AM  to 9.45AM    -Common Integration
+9.45AM  to 10.00AM   -Classroom
+10.00AM to 10.20AM   -CrossbrowserTesting
+10.20AM to 10.35AM   -Break
+10.35AM to 11.45AM   -Attributes
+11.45AM to 12.15PM   -Explicitwait
+12.15PM to 12.45PM   -Static keyword
+12.45PM to 1.00PM    -Live Quiz
+
+-------------------------------------------------------------------------------------------
+
+Added input arg as filename to readData()
+Pushed the DataProvider method to common class
+Declared public string variable as filename in commonclass to set the filename to the readExcel
+Created a method as setValue to assign the filename with the respective testcase
+
+@BeforeTest -->filename  values has to be set
+@DataProvider-->needs filename
+  @BeforeMethod
+  
+@BeforeSuite
+ @BeforeTest
+  @BeforeClass
+   @DataProvider
+     @BeforeMethod
+	  @Test
+--------------------------------------------------------------------------------------------
+Attributes -->@Test 
+
+dataProvider= "Dataprovider methodname"
+
+priority -->set which @Testmethod run first within class
+  ->takes the lowest priority values
+  -->default -0
+
+enabled -->set to ignore from testcase execution  -within the class  and between the classes
+ -->default-true
+
+invocationCount -->set to execute testcase multiple times  
+threadPoolSize -->comes along with invocationCount --parallel exe at test method
+default value=0
+
+
+ChromeBrowser-->Createlead-->inv=3 thread=2  ->one instance
+cqbcd  -chrome1
+        chrome2
+
+edgebrowser-->deletelead-->inv 3 thres=2 -->one instanc
+eabced -edge 1
+		edge 2
+		
+-----------------------------
+Waits
+-----
+implicitWait ->global wait -->selenium Wait
+  ->findElement and findElements
+  10 sec -->3 sec 
+  
+Thread.sleep(timeout) -->10-->3sec-->complete 10sec
+   -explcit wait--java wait
+   -not applied on the elements /applied on thread
+   -pauses execution 
+   -slow down the execution
+   
+Webdriverwait->explicit wait from selenium  -->10sec
+  -->apply wait on a specific behaviour element
+  -->conditional wait   
+  -->polling time -->frequency of visiting
+     500ms  
+   10 sec -->3 sec-->continues the exe
+  visibility of the element
+  clickability of the element  
+  is applied to wait the condition ele to be met
+  throw the exception
+  
+ static 
+ -----
+ Java keyword -->makes the variable/method /block as class variable/method/block
+    ->class as reference
+	->can be used without creating object
+	
+this -keyword	
+  to refer the current class object /variable/method
+  
+  adv
+  1.to resolve the ambigity between the global and local variable name
+  2.to do method chaining
+  3.constructor chaining
