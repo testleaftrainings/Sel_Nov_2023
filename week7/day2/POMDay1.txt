@@ -1,0 +1,85 @@
+Today's Agenda:
+---------------
+
+9.00AM  to 10.00AM  -Hooks Implementation
+10.00AM  to 10.25AM -Classroom
+10.25AM to 10.50AM -Tags
+10.50AM to 11.00AM -Break
+11.00AM to 12.10AM -POM with Sequential
+12.15AM to 12.40AM -Classroom
+12.40AM to 1.00PM - POM with Parallel 
+
+
+---------------
+
+Hooks Implemetation
+----------------
+
+1.Create a java class as HooksImpl  under the step definition package
+2.Move the common configuration from stepdef to the Hooks class under the methods pre and post condition 
+  annotated the methods with @Before and @After
+3.Comment (remove) common configuration(feature file (Background) and stepDef)
+
+Cucumber annotations cannot be inherited
+ To resolve this
+	 ---------------
+	 Create a Baseclass and just declare the driver variable as public static
+	 Extend the HooksImpl ,Login and CreateLead classes with BaseClass
+	 
+	
+	 
+
+Tags -->annotate the feature file/scenario based on the requirement
+
+
+POM ->Page Object Model
+-----------------------
+  design pattern 
+  
+  -->uniformity
+  -->better Productivity
+  -->easily maintainable
+  
+  Steps to build POM
+  ------------------
+  Step:1 create 3 packages 
+		 base
+		 pages
+		 testcase
+  Step: 2 Create a class called ProjectSpecficMethod
+        Create methods as pre and post condition methods 
+		and annotate with @BeforeMethod and @AfterMethod respectively
+		
+  Step:3 Create classes for all pages that we navigate under pages package 
+ and included the logic to interact with webElement of the respective page class
+ and extends all the classes with ProjectspecificMethod
+ add return statement as per the navigation
+6pages
+LoginPage -->username,password,login button
+WelcomePage -->crmsfa , logout
+MyhomePage -->Leads
+LeadsPage  -->createlead
+CreateLeadPage -->cname,fname,lname,create button
+ViewLeadPage  -->verification
+
+step:4
+ Create a class under testcase to excute the code
+  Loginfunctionality -->annotate the method with @Test extend the Projectspecificmethod
+	 call the methods by creating object for the login page
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
