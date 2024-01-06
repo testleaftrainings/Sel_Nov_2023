@@ -1,0 +1,86 @@
+Tomorrow's Agenda:
+----------------
+9.00AM to 9.40AM 	-POM with Parallel
+9.40AM to 10.00PM 	-Classroom
+10.00AM to 11.00AM 	-pom with Excel and multilingual
+11.00AM to 11.15AM 	-classroom
+11.15PM to 11.30PM  -Break
+11.30AM to 12.15PM  -POM with Cucumber
+12.15PM to 12.50PM  -Threadlocal Configuration
+12.50PM to 1.05PM   -classroom
+----------------------------------------------
+
+POM -->for seq -->static driver inst -->one single one after of the other 
+    -->for par -->multiple driver inst -->for each thread -->simultaneously
+	
+	Constructor -->initialize the referenc for a class
+	----------------------------------------------------
+	 -->special method in java
+	 -->it has the name as classname
+	 -->doest not have any return type
+	 
+	 Two types
+	  --------
+	  default constructor
+	  parametrized constructor
+	  
+	  Constructor Chaining:
+	  ----------------------
+	  Calling one constructor from other Constructor
+	  
+	 
+How to step POM for parallel execution:
+--------------------------------------
+1. Remove static from the driver declaration
+2. Create public constructor in all the pages with ChromeDriver as argument to receive driver
+	this.driver = driver
+3. Pass driver as a input to all the constructor call (testcases & pages)
+
+POM with Excel Integration:
+============================
+Data Integration:
+-----------------
+1. Apache POI library -> Needs to be added into pom.xml (done)
+2. Test data in excel document (done)
+3. Program to read the data from excel (done)
+4. DataProvider to supply data to the testcase (done)
+5. Need a method to define the excel document name (setValue())
+
+
+Steps to Integrate Data:
+-------------------------
+1. Convert the normal method to parameterized method with String argument to receive input
+	and replace the hardcoded value with argument variable
+2. Create arguments in the @Test method
+		Number arguments should be same as the number of data we need for the testcase
+3. Create excel workbooks under data folder in the project	
+4. Copy the ReadExcelData.java and paste it under utils package
+5. Copy the DataProvider code and excelFileName variable and paste in BaseClass
+		- Correct the import statement for ReadExcelData (from utils package)
+6. Integrate DataProvider with testcase
+----------------------------------------------------------------------------------------------------------------	 
+Steps to integrate  multilingual with POM:
+========================================
+ 1. Create config.properties under src/main/resources
+       rightclick-> src/main/resources-> Click New-> Other -> File -> config.properties->Finish
+ 2. In the BaseClass inside preCondition() 
+     FileInputStream fis = new FileInputStream("./src/main/resources/config.properties");
+		prop = new Properties();
+		prop.load(fis);
+ 3. Declare public static Properties prop;
+ 4. Use prop.getProperty("key") in required steps to read the data from the properties file
+	 
+	 
+POM with Cucumber
+-----------------
+	 features ->
+	 steps -->pages
+	 runner
+	 
+	 Cucumber config -->driver to be static
+					 -->doesnot allow constructor config					 	
+						class pages.LoginPage does not have a public zero-argument constructor.
+	 Testng Config --doesnot allow static for parallel execution
+	 
+	 ---------------	 
+	 Encapsulation -->make the thread safe-->to hold driver variable
