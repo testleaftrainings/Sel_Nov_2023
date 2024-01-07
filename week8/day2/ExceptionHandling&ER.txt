@@ -1,0 +1,118 @@
+Exception:
+ runtime error
+  complie time error
+stop the program due to isssue
+it interrupt the execution
+code error
+
+Error Vs Exception
+Error -is caused by system -stack overflow
+Exception caused by program-All java and selenium exceptions
+ Abnormal condition which interrupts the flow of execution
+ 
+ Exception handling:
+   giving feedback /information about the exception ->to continue the execution
+   
+   Exception -->class
+       Runtime Exception
+	     Unchecked Exception
+		  ArrayOutofBoundException
+		  MethodMatcher 
+		  NoSuchelement
+		  InvalidSelector
+		  NullPointer
+		  NoSuchWindow		  		  
+	   Compiletime Exception
+            Checked Exception
+			   IOException
+			   Interrupted Exception 
+   
+  To handle the exception 
+try -->logic will be tried for execution 
+catch -->handled catch block
+
+try			try			try
+catch		catch			.click()
+			catch			try{
+								js.click
+								catch(){
+								}
+						catch()
+
+finally: block comes along with try block 
+           Logic to be executed irrespective of the other exception handled/not
+
+try			try 
+catch 		finally
+finally
+
+
+Compile Time Exception:
+-----------------------
+throws -->the line of code may throw exception
+throw -->explicitly throw the exception
+
+Extent Report:
+-------------
+  3rd party library -Avent stack
+  -status of the report
+  -screenshots in the reports
+  -customize the report -->category/author
+  -Graphical representation
+  -History of reports 
+
+Add the dependency
+
+<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>3.1.5</version>
+		</dependency>
+
+
+POM with ExtentReport
+---------------------
+Steps to integrate ExtentReport:
+================================
+1. Create a startReport() in BaseClass with ExtentReport declared as 
+   global variable
+    - Add the common code for all the testcases (first 4 lines of code)
+2. Create stopReport() in BaseClass with extent.flush() and apply @AfterSuite
+3. Create testcaseDetails() with test details code
+    - Declare testName, testDescription, testAuthor, testCategory as global variables
+    - Replace the hardcode values with variables
+    - apply @BeforeClass annotation for this method
+4. assgin the values for testName, testDescription, testAuthor, testCategory in setData() in each testcase
+5. Create reportStep() with 2 arguments (msg, status) in BaseClass
+6. Call the reportStep() from each step method using try / catch
+    - try block with pass status
+    - catch block with fail status
+	
+	
+@BeforeSuite      -->starting the report
+  @BeforeTest     -->test data file,testdetails
+   @BeforeClass   -->to attach the testdetails into reports
+    @DataProvider  -->to read data from excel
+	 @BeforeMethod -->precondition method
+	   @Test
+--------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
