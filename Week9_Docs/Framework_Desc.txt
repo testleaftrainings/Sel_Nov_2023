@@ -1,0 +1,105 @@
+Page Object Model Recap:
+base
+	ProjectSpecificMethods -> Base class for all the pages and the testcases
+						   -> common methods & variables for the pages and the TC
+pages
+	It contains all the java classes for each page that we use in application
+testcases
+	It contains all the java classes with sequence of actions for each testcase
+utils -> Contains common programs to interact with external application
+	ReadExcel -> To read the data from excel
+	
+	
+Hybrid Framewok:
+		- Is designed based on Page object model pattern
+		- Used maven as build tool to have better dependency management for the  project
+		
+External Libraries:
+		Selenium WebDriver -> Used to interact with the web application
+		TestNG -> Used for controlled test execution
+		Apache POI -> used to support data driven for the testcases
+		Cucumber	-> used to support BDD automation
+		ExtentReport -> used to generate html automation summary
+		
+Framework Components:
+com.framework.selenium.api.design
+	Browser (I) -> Used to design all the reusable methods required for browser interactions
+	Element (I) -> Used to design all the reusable methods required for WebElement interactions
+	Locators (E) -> Used to define the locators that are allowed to use 
+com.framework.selenium.api.base
+	SeleniumBase
+		-> Implementation class for Browser and Element interfaces
+		-> All the reusable methods required for automation are implemented here
+		-> Library for all the automation methods
+		-> We created reusable methods on top of Selenium methods(wrapper methods)
+			- Common exception handling is implemented at method level in all the methods
+			- Reusable methods, which will simplify the automation engineers work
+				- Increase the productivity
+				- Helps to optimize the code and improve the performance
+	DriverInstance -> Used to declare and initialize the RemoteWebDriver and WebDriverWait			
+
+com.framework.testng.api.base 
+	ProjectSpecificMethods
+	-> Base class for all the pages and the testcases
+	-> common methods & variables for the pages and the Test cases
+com.leaftaps.pages 
+	-> It contains all the java classes for each page that we use in application
+	-> For each action, there will be a method in the respective pages with proper return statements
+com.leaftaps.testcases
+	-> It contains all the java classes with sequence of actions for each testcase
+com.framework.utils -> utility programs to intract with external applications
+	-> DataLibrary - to read the data from excel
+	-> Reporter - Contains the ExtentReport configuration
+		
+		
+Test execution is based on TestNG annotation:
+---------------------------------------------
+@BeforeSuite -> startReport() [Reporter]	
+	@BeforeTest -> setValues() [Testcase]
+		@BeforeClass -> startTestCase() [Reporter]
+			@DataProvider -> fetchData() [ProjectSpecificMethods]
+				@BeforeMethod -> preCondition() [ProjectSpecificMethods]
+					@Test -> runLogin() [Testcase]
+				@AfterMethod -> postCondition() [ProjectSpecificMethods]
+		@AfterClass -> NA
+	@AfterTest -> NA
+@AfterSuite -> endResult() [Reporter]	
+
+
+Hierarchy of the Classes:
+AbstractTestNGCucumberTests
+	DriverInstance
+		Reporter	
+			SeleniumBase
+				ProjectSpecificMethods
+					Pages & Testcases
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
